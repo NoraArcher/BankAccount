@@ -4,7 +4,7 @@ public class BankAccount {
   private int accountID;
   private String password;
 
-  public BankAccount (String p, int a) {
+  public BankAccount (int a, String p) {
     password = p;
     accountID = a;
     balance = 0.0;
@@ -23,7 +23,7 @@ public class BankAccount {
   }
 
   public boolean deposit(double amount) {
-    if (amount > 0.0) {
+    if (amount >= 0.0) {
       balance += amount;
       return true;
     }
@@ -31,7 +31,7 @@ public class BankAccount {
   }
 
   public boolean withdraw(double amount) {
-    if ((amount <= balance) && (amount > 0)) {
+    if ((amount <= balance) && (amount >= 0)) {
       balance -= amount;
       return true;
     }

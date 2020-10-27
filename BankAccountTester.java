@@ -1,8 +1,8 @@
 public class BankAccountTester {
 
   public static void main(String[] args) {
-    BankAccount ba1 = new BankAccount("MalteseFalc0n", 7879);
-    BankAccount ba2 = new BankAccount("Nairobi313phant", 4563);
+    BankAccount ba1 = new BankAccount(7879, "MalteseFalc0n");
+    BankAccount ba2 = new BankAccount(4563, "Nairobi313phant");
 
 //to test BankAccount code
     ba1.deposit(900.0);
