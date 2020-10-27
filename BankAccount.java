@@ -18,6 +18,11 @@ public class BankAccount {
     return accountID;
   }
 
+  public boolean setPassword(String p) {
+    password = p;
+    return true;
+  }
+
   public boolean deposit(double amount) {
     if (amount > 0.0) {
       balance += amount;
@@ -27,11 +32,11 @@ public class BankAccount {
   }
 
   public boolean withdraw(double amount) {
-    if ((amount > balance) || (amount < 0)) {
-      return false;
+    if ((amount <= balance) && (amount > 0)) {
+      balance -= amount;
+      return true;
     }
-    balance =- amount;
-    return true;
+    return false;
   }
 
     public String toString() {
